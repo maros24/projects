@@ -66,7 +66,6 @@ namespace WindowsFormsApp5
             text1.BackColor = Color.DodgerBlue;
             text1.Font = new Font(text1.Font, text1.Font.Style | FontStyle.Bold);
             this.Controls.Add(text1);
-            this.button1.Click -= new EventHandler(secondAction);
             this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
             
@@ -84,8 +83,6 @@ namespace WindowsFormsApp5
             text2.BackColor = Color.DodgerBlue;
             text2.Font = new Font(text2.Font, text2.Font.Style | FontStyle.Bold);
             this.Controls.Add(text2);
-            this.button1.Click -= new EventHandler(secondAction);
-            this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
             this.button1.Click += new EventHandler(fourthAction);
             
@@ -103,28 +100,22 @@ namespace WindowsFormsApp5
             text3.BackColor = Color.DodgerBlue;
             text3.Font = new Font(text3.Font, text3.Font.Style | FontStyle.Bold);
             this.Controls.Add(text3);
-            this.button1.Click -= new EventHandler(secondAction);
-            this.button1.Click += new EventHandler(firstAction);
-            this.button1.Click += new EventHandler(thirdAction);
+            
             this.button1.Click += new EventHandler(fourthAction);
             this.button1.Click += new EventHandler(fifthAction);
         }
         private void fifthAction(object sender, EventArgs e)
         {
-            Point currentLocation2 = textBox2.Location;
-            TextBox text2 = new TextBox
+            Point currentLocation4 = textBox2.Location;
+            TextBox text4 = new TextBox
             {
                 Height = 29,
                 Width = 100,
-                Location = new Point(currentLocation2.X, currentLocation2.Y += 175)
+                Location = new Point(currentLocation4.X, currentLocation4.Y += 175)
             };
-            text2.BackColor = Color.DodgerBlue;
-            text2.Font = new Font(text2.Font, text2.Font.Style | FontStyle.Bold);
-            this.Controls.Add(text2);
-            this.button1.Click -= new EventHandler(secondAction);
-            this.button1.Click += new EventHandler(firstAction);
-            this.button1.Click += new EventHandler(thirdAction);
-            this.button1.Click += new EventHandler(fourthAction);
+            text4.BackColor = Color.DodgerBlue;
+            text4.Font = new Font(text4.Font, text4.Font.Style | FontStyle.Bold);
+            this.Controls.Add(text4);
             this.button1.Click += new EventHandler(fifthAction);
         }
         private void button2_Click(object sender, EventArgs e)
