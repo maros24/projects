@@ -69,6 +69,8 @@ namespace WindowsFormsApp5
             this.button1.Click -= new EventHandler(secondAction);
             this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
+            
+           
         }
         private void thirdAction(object sender, EventArgs e)
         {
@@ -85,11 +87,51 @@ namespace WindowsFormsApp5
             this.button1.Click -= new EventHandler(secondAction);
             this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
+            this.button1.Click += new EventHandler(fourthAction);
+            
         }
 
+        private void fourthAction(object sender, EventArgs e)
+        {
+            Point currentLocation3 = textBox2.Location;
+            TextBox text3 = new TextBox
+            {
+                Height = 29,
+                Width = 100,
+                Location = new Point(currentLocation3.X, currentLocation3.Y += 140)
+            };
+            text3.BackColor = Color.DodgerBlue;
+            text3.Font = new Font(text3.Font, text3.Font.Style | FontStyle.Bold);
+            this.Controls.Add(text3);
+            this.button1.Click -= new EventHandler(secondAction);
+            this.button1.Click += new EventHandler(firstAction);
+            this.button1.Click += new EventHandler(thirdAction);
+            this.button1.Click += new EventHandler(fourthAction);
+            this.button1.Click += new EventHandler(fifthAction);
+        }
+        private void fifthAction(object sender, EventArgs e)
+        {
+            Point currentLocation2 = textBox2.Location;
+            TextBox text2 = new TextBox
+            {
+                Height = 29,
+                Width = 100,
+                Location = new Point(currentLocation2.X, currentLocation2.Y += 175)
+            };
+            text2.BackColor = Color.DodgerBlue;
+            text2.Font = new Font(text2.Font, text2.Font.Style | FontStyle.Bold);
+            this.Controls.Add(text2);
+            this.button1.Click -= new EventHandler(secondAction);
+            this.button1.Click += new EventHandler(firstAction);
+            this.button1.Click += new EventHandler(thirdAction);
+            this.button1.Click += new EventHandler(fourthAction);
+            this.button1.Click += new EventHandler(fifthAction);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form3 form3 = new Form3();
+            this.Hide();
+            form3.Show();
         }
     }
 }
