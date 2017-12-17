@@ -12,16 +12,33 @@ namespace WindowsFormsApp5
 {
     public partial class Form3 : Form
     {
-        public Form3(Form2 form2)
+        public Form3()
         {
             InitializeComponent();
             
 
         }
-        
-    
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("");
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("");
+
+
+
+        }
     }
 
     }
-}
+
 

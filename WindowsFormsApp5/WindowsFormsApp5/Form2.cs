@@ -12,10 +12,12 @@ namespace WindowsFormsApp5
 {
     public partial class Form2 : Form
     {
+        
         public Form2()
         {
             InitializeComponent();
             this.button1.Click += new EventHandler(firstAction);
+            
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -38,6 +40,8 @@ namespace WindowsFormsApp5
 
 
         }
+        
+       
         private void firstAction(object sender, EventArgs e)
         {
             Point currentLocation = textBox2.Location;
@@ -50,8 +54,11 @@ namespace WindowsFormsApp5
             text.BackColor = Color.DodgerBlue;
             text.Font = new Font(text.Font, text.Font.Style | FontStyle.Bold);
             this.Controls.Add(text);
+            
             this.button1.Click -= new EventHandler(firstAction);
             this.button1.Click += new EventHandler(secondAction);
+            
+            
         }
 
         private void secondAction(object sender, EventArgs e)
@@ -100,10 +107,10 @@ namespace WindowsFormsApp5
             text3.BackColor = Color.DodgerBlue;
             text3.Font = new Font(text3.Font, text3.Font.Style | FontStyle.Bold);
             this.Controls.Add(text3);
-            
             this.button1.Click += new EventHandler(fourthAction);
             this.button1.Click += new EventHandler(fifthAction);
         }
+
         private void fifthAction(object sender, EventArgs e)
         {
             Point currentLocation4 = textBox2.Location;
@@ -118,11 +125,15 @@ namespace WindowsFormsApp5
             this.Controls.Add(text4);
             this.button1.Click += new EventHandler(fifthAction);
         }
-        private void button2_Click(object sender, EventArgs e)
+       
+    private void button2_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
             this.Hide();
             form3.Show();
+          
         }
-    }
+        
+    };
 }
+
