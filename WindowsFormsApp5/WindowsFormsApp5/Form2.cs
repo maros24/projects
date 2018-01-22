@@ -12,7 +12,7 @@ namespace WindowsFormsApp5
 {
     public partial class Form2 : Form
     {
-        
+        public static string tex, tex1, tex2, tex3, tex4;
         public Form2()
         {
             InitializeComponent();
@@ -40,8 +40,8 @@ namespace WindowsFormsApp5
 
 
         }
-        
-       
+
+
         private void firstAction(object sender, EventArgs e)
         {
             Point currentLocation = textBox2.Location;
@@ -57,7 +57,7 @@ namespace WindowsFormsApp5
             
             this.button1.Click -= new EventHandler(firstAction);
             this.button1.Click += new EventHandler(secondAction);
-            
+            tex = text.Text;
             
         }
 
@@ -75,8 +75,8 @@ namespace WindowsFormsApp5
             this.Controls.Add(text1);
             this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
-            
-           
+
+            tex1 = text1.Text;
         }
         private void thirdAction(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace WindowsFormsApp5
             this.Controls.Add(text2);
             this.button1.Click += new EventHandler(thirdAction);
             this.button1.Click += new EventHandler(fourthAction);
-            
+            tex2 = text2.Text;
         }
 
         private void fourthAction(object sender, EventArgs e)
@@ -109,6 +109,7 @@ namespace WindowsFormsApp5
             this.Controls.Add(text3);
             this.button1.Click += new EventHandler(fourthAction);
             this.button1.Click += new EventHandler(fifthAction);
+            tex3 = text3.Text;
         }
 
         private void fifthAction(object sender, EventArgs e)
@@ -124,9 +125,14 @@ namespace WindowsFormsApp5
             text4.Font = new Font(text4.Font, text4.Font.Style | FontStyle.Bold);
             this.Controls.Add(text4);
             this.button1.Click += new EventHandler(fifthAction);
+            tex4 = text4.Text;
         }
-       
-    private void button2_Click(object sender, EventArgs e)
+        public string[] names = { tex, tex1, tex2, tex3, tex4 };
+
+
+
+
+        public void button2_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
             this.Hide();

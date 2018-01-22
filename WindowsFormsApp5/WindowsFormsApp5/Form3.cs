@@ -12,6 +12,8 @@ namespace WindowsFormsApp5
 {
     public partial class Form3 : Form
     {
+        public static string name, name1, name2, name3, name4;
+        
         public Form3()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace WindowsFormsApp5
 
         }
 
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             string[] mas = { "Действие следующего игрока выполняешь с ним",
@@ -62,6 +65,8 @@ namespace WindowsFormsApp5
 
             MessageBox.Show(temp);
 
+            
+            
 
         }
     }
