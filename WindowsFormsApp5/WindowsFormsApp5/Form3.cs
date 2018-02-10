@@ -12,23 +12,26 @@ namespace WindowsFormsApp5
 {
     public partial class Form3 : Form
     {
-        public static string name, name1, name2, name3, name4;
-        
-        public Form3()
+
+        string name;
+        public Form3(string name)
         {
+            this.name = name;
             InitializeComponent();
             
 
         }
+       
 
         private void chart1_Click(object sender, EventArgs e)
         {
 
         }
-
         
+       
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+          
             string[] mas = { "Действие следующего игрока выполняешь с ним",
                       "Выбери игрока и выполняй все его желания следующие 10 минут",
                       "Спеть, зажав нос",
@@ -42,8 +45,9 @@ namespace WindowsFormsApp5
             Random rand = new Random();
 
             string temp = mas[rand.Next(0, 8)];
-
+            MessageBox.Show(name);
             MessageBox.Show(temp);
+
 
         }
 
