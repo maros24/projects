@@ -13,22 +13,26 @@ namespace WindowsFormsApp5
     public partial class Form3 : Form
     {
 
-        string name;
-        public Form3(string name)
+        string name, name1, name2, name3, name4, name5, name6;
+      
+
+
+        public Form3(string name, string name1, string name2, string name3, string name4, string name5, string name6)
         {
             this.name = name;
+            this.name1 = name1;
+            this.name2 = name2;
+            this.name3 = name3;
+            this.name4 = name4;
+            this.name5 = name5;
+            this.name6 = name6;
             InitializeComponent();
-            
-
         }
-       
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
         
-       
+
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
           
@@ -45,7 +49,7 @@ namespace WindowsFormsApp5
             Random rand = new Random();
 
             string temp = mas[rand.Next(0, 8)];
-            MessageBox.Show(name);
+            MessageBox.Show(name6);
             MessageBox.Show(temp);
 
 

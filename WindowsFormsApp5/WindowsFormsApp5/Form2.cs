@@ -13,11 +13,12 @@ namespace WindowsFormsApp5
     
     public partial class Form2 : Form
     {
-        public  static string name, name1, name2, name3, name4;
         public Form2()
         {
+            
             InitializeComponent();
             this.button1.Click += new EventHandler(firstAction);
+            
             
         }
         private void label1_Click(object sender, EventArgs e)
@@ -42,9 +43,10 @@ namespace WindowsFormsApp5
 
         }
 
-
+        TextBox textBox3 = new TextBox();
         private void firstAction(object sender, EventArgs e)
         {
+            
             Point currentLocation = textBox2.Location;
             TextBox text = new TextBox
             {
@@ -55,13 +57,12 @@ namespace WindowsFormsApp5
             text.BackColor = Color.DodgerBlue;
             text.Font = new Font(text.Font, text.Font.Style | FontStyle.Bold);
             this.Controls.Add(text);
-            
             this.button1.Click -= new EventHandler(firstAction);
             this.button1.Click += new EventHandler(secondAction);
-            Form2.name = text.Text;
-            
-        }
+            textBox3 = text;
 
+        }
+        TextBox textBox4 = new TextBox();
         private void secondAction(object sender, EventArgs e)
         {
             Point currentLocation1 = textBox2.Location;
@@ -76,10 +77,10 @@ namespace WindowsFormsApp5
             this.Controls.Add(text1);
             this.button1.Click += new EventHandler(firstAction);
             this.button1.Click += new EventHandler(thirdAction);
-
-            name1 = text1.Text;
-            
+            textBox4 = text1;
         }
+
+        TextBox textBox5 = new TextBox();
         private void thirdAction(object sender, EventArgs e)
         {
             Point currentLocation2 = textBox2.Location;
@@ -94,9 +95,10 @@ namespace WindowsFormsApp5
             this.Controls.Add(text2);
             this.button1.Click += new EventHandler(thirdAction);
             this.button1.Click += new EventHandler(fourthAction);
-            name2 = text2.Text;
+            textBox5 = text2;
         }
 
+        TextBox textBox6 = new TextBox();
         private void fourthAction(object sender, EventArgs e)
         {
             Point currentLocation3 = textBox2.Location;
@@ -111,9 +113,10 @@ namespace WindowsFormsApp5
             this.Controls.Add(text3);
             this.button1.Click += new EventHandler(fourthAction);
             this.button1.Click += new EventHandler(fifthAction);
-            name3 = text3.Text;
+            textBox6 = text3;
         }
 
+        TextBox textBox7 = new TextBox();
         private void fifthAction(object sender, EventArgs e)
         {
             Point currentLocation4 = textBox2.Location;
@@ -127,8 +130,7 @@ namespace WindowsFormsApp5
             text4.Font = new Font(text4.Font, text4.Font.Style | FontStyle.Bold);
             this.Controls.Add(text4);
             this.button1.Click += new EventHandler(fifthAction);
-            name4 = text4.Text;
-            
+            textBox7 = text4;
         }
 
 
@@ -138,7 +140,13 @@ namespace WindowsFormsApp5
         
         public void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(this.textBox2.Text);
+            Form3 form3 = new Form3(this.textBox1.Text, 
+                this.textBox2.Text,
+                this.textBox3.Text, 
+                this.textBox4.Text,
+                this.textBox5.Text,
+                this.textBox6.Text,
+                this.textBox7.Text);
             this.Hide();
             form3.Show();
             
