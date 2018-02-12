@@ -13,48 +13,102 @@ namespace WindowsFormsApp5
     public partial class Form3 : Form
     {
 
-        string name, name1, name2, name3, name4, name5, name6;
-      
-
-
-        public Form3(string name, string name1, string name2, string name3, string name4, string name5, string name6)
+        string name1, name2, name3, name4, name5, name6, name7;
+        Label label8 = new Label();
+        string[] names;
+        private void Form3_Load(object sender, EventArgs e)
         {
-            this.name = name;
+            /*this.label8.Text = "gtnerghbwjekrnhqwlureihnb";
+            this.label8.Location= new System.Drawing.Point(55, 160);
+            this.label8.Size= new System.Drawing.Size(65, 15);
+            this.Controls.Add(label8);*/
+        }
+
+        public Form3(string name1, string name2, string name3, string name4, string name5, string name6, string name7)
+        {
+           
             this.name1 = name1;
             this.name2 = name2;
             this.name3 = name3;
             this.name4 = name4;
             this.name5 = name5;
             this.name6 = name6;
+            this.name7 = name7;
             InitializeComponent();
+      
         }
-
-        
-
-
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+    public void Massive()
         {
-          
-            string[] mas = { "Действие следующего игрока выполняешь с ним",
-                      "Выбери игрока и выполняй все его желания следующие 10 минут",
-                      "Спеть, зажав нос",
-                      "Изобрази назойливую муху",
-                      "Повтори предыдущее задание",
-                      "Изобрази собаку, которая метит территорию",
-                      "Придумай прозвище всем игрокам",
-                      "уговорить соседнего игрока купить рулон туалетной бумаги за 150 грн."
-                       };
+            int count = 0;
+            if (name1 != "")
+            {
+                label1.Text = name1 + ":";
+                count++;
+            }
+            if (name2 != "")
+            {
+                label2.Text = name2 + ":";
+                count++;
+            }
+            if (name3 != "")
+            {
+                label3.Text = name3 + ":";
+                count++;
+            }
+            if (name4 != "")
+            {
+                label4.Text = name4 + ":";
+                count++;
+            }
+            if (name5 != "")
+            {
+                label5.Text = name5 + ":";
+                count++;
+            }
+            if (name6 != "")
+            {
+                label6.Text = name6 + ":";
+                count++;
+            }
+            if (name7 != "")
+            {
+                label7.Text = name7 + ":";
+                count++;
+            }
+            string[] names = new string[count];
+            if (name1 != "")
+            {
+                names[0] = name1;
 
-            Random rand = new Random();
-
-            string temp = mas[rand.Next(0, 8)];
-            MessageBox.Show(name6);
-            MessageBox.Show(temp);
-
-
+            }
+            if (name2 != "")
+            {
+                names[1] = name2;
+            }
+            if (name3 != "")
+            {
+                names[2] = name3;
+            }
+            if (name4 != "")
+            {
+                names[3] = name4;
+            }
+            if (name5 != "")
+            {
+                names[4] = name5;
+            }
+            if (name6 != "")
+            {
+                names[5] = name6;
+            }
+            if (name7 != "")
+            {
+                names[6] = name7;
+            }
         }
-
+        
+         
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             string[] mas = { "Как часто Вы думаете о смерти?",
@@ -68,14 +122,26 @@ namespace WindowsFormsApp5
                        };
 
             Random rand = new Random();
-
             string temp = mas[rand.Next(0, 8)];
-
+            
             MessageBox.Show(temp);
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
-            
-            
+            string[] mas = { "Действие следующего игрока выполняешь с ним",
+                      "Выбери игрока и выполняй все его желания следующие 10 минут",
+                      "Спеть, зажав нос",
+                      "Изобрази назойливую муху",
+                      "Повтори предыдущее задание",
+                      "Изобрази собаку, которая метит территорию",
+                      "Придумай прозвище всем игрокам",
+                      "уговорить соседнего игрока купить рулон туалетной бумаги за 150 грн."
+                       };
 
+            Random rand = new Random();
+            string temp = mas[rand.Next(0, 8)];
+            MessageBox.Show(temp);
         }
     }
 
