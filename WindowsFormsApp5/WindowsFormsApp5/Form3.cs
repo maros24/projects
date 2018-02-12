@@ -18,10 +18,7 @@ namespace WindowsFormsApp5
         string[] names;
         private void Form3_Load(object sender, EventArgs e)
         {
-            /*this.label8.Text = "gtnerghbwjekrnhqwlureihnb";
-            this.label8.Location= new System.Drawing.Point(55, 160);
-            this.label8.Size= new System.Drawing.Size(65, 15);
-            this.Controls.Add(label8);*/
+            
         }
 
         public Form3(string name1, string name2, string name3, string name4, string name5, string name6, string name7)
